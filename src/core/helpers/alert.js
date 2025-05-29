@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 export const notification = (title, message, type) => {
     Swal.fire({
         title,
-        message,
+        text: message,
         icon: type,
         confirmButtonText: 'Aceptar'
     });

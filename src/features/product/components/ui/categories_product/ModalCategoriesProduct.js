@@ -4,7 +4,7 @@
 import { useDispatch } from "react-redux"
 // own
 import { useForm } from "../../../../../core/hooks/useForm"
-import { registerCategoriesProduct } from "../../../actions/categories_product"
+import { registerCategoriesProduct } from "../../../redux/categories_product/actions"
 
 export const ModalCategoriesProduct = () => {
     const dispatch = useDispatch();

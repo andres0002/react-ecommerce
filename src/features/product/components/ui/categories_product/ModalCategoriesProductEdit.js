@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // own
 import { useForm } from "../../../../../core/hooks/useForm";
-import { activateCategoriesProduct, updateCategoriesProduct } from "../../../actions/categories_product";
+import { activateCategoriesProduct, updateCategoriesProduct } from "../../../redux/categories_product/actions";
 
 export const ModalCategoriesProductEdit = () => {
     const dispatch = useDispatch();

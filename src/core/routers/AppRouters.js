@@ -9,12 +9,12 @@ import { LoginScreen } from "../../features/auth/components/LoginScreen";
 import { RegisterScreen } from "../../features/auth/components/RegisterScreen";
 import { ForgotPasswordScreen } from "../../features/auth/components/ForgotPasswordScreen";
 import { DasboardScreen } from "../../shared/components/ui/DasboardScreen";
-import { startChecking } from "../../features/auth/actions/auth";
-import { RoutersPublic } from "./RoutersPublic";
-import { RoutersPrivate } from "./RoutersPrivate";
+import { startChecking } from "../../features/auth/redux/actions";
+import { PublicRouters } from "./PublicRouters";
+import { PrivateRouters } from "./PrivateRouters";
 import { NoFoundScreen } from "../../shared/components/ui/NoFoundScreen";
 
-export const RoutersApp = () => {
+export const AppRouters = () => {
     const dispatch = useDispatch();
     const {token} = useSelector(state => state.auth);
 
@@ -33,29 +33,20 @@ export const RoutersApp = () => {
                     <Route
                         exact path="/auth/login"
                         element = {
-                            <RoutersPublic isAuthenticated = { !!token }>
+                            <PublicRouters isAuthenticated = { !!token }>
                                 <LoginScreen/>
-                            </RoutersPublic>
+                            </PublicRouters>
                         }
                     />
                     <Route exact path="/auth/register" element = { <RegisterScreen/> } />
                     <Route exact path="/auth/forgot-password" element = { <ForgotPasswordScreen/> } />
                     <Route exact path="/no-found" element = { <NoFoundScreen/> } />
                     <Route
-                        exact path="/dashboard"
+                        exact path="/dashboard/*"
                         element = {
-                            <RoutersPrivate isAuthenticated = { !!token }>
+                            <PrivateRouters isAuthenticated = { !!token }>
                                 <DasboardScreen/>
-                            </RoutersPrivate>
-                        }
-                    />
-                    <Route
-                        exact path="/products/category-products"
-                        element = {
-                            <RoutersPrivate isAuthenticated = { !!token }
-                                children = { <DasboardScreen/> } 
-                                
-                            /> 
+                            </PrivateRouters>
                         }
                     />
                     <Route

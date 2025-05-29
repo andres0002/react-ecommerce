@@ -9,6 +9,8 @@ export const loadCategoriesProduct = async () => {
     const body = await response.json();
     
     let categories_product = {};
+    
+    categories_product.columns = ['ID', 'Name'];
     let data = [];
 
     body.forEach(category_product => {

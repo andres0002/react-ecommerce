@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 // own
 import { useForm } from "../../../core/hooks/useForm";
-import { startLogin } from "../actions/auth";
+import { startLogin } from "../redux/actions";
 
 export const LoginScreen = () => {
     const dispatch = useDispatch();

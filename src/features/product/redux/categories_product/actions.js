@@ -2,11 +2,11 @@
 // react
 // third
 // own
-import { notification } from "../../../core/helpers/alert";
-import { fetchWithToken } from "../../../core/helpers/fetch";
-import { types } from "../../../core/types";
-import { eventLoaded } from "../components/categories_product/CategoriesProductScreen";
-import { loadCategoriesProduct } from "../helpers/categories_product/loadCategoriesProduct";
+import { notification } from "../../../../core/helpers/alert";
+import { fetchWithToken } from "../../../../core/helpers/fetch";
+import { types } from "../../../../core/types";
+import { eventLoaded } from "../../components/categories_product/CategoriesProductScreen";
+import { loadCategoriesProduct } from "../../helpers/categories_product/loadCategoriesProduct";
 
 export const registerCategoriesProduct = ({description}) => {
     return async dispatch => {

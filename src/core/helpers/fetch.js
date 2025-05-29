@@ -5,11 +5,13 @@ export const fetchWithoutToken = (endpoint, data, method='GET') => {
 
     if (method === 'GET') {
         return fetch (url).then(response => {
-            console.log(`main fetch -> success -> status code -> ${response.status}`);
+            // console.log(`main fetch -> success -> status code -> ${response.status}`);
+            return response;
         }).catch(error => {
-            console.log(`main fetch -> error -> ${error}`);
+            // console.log(`main fetch -> error -> ${error}`);
+            return null;
         }).finally(() => {
-            console.log('main fetch -> finally');
+            // console.log('main fetch -> finally');
         });
     } else {
         return fetch (url, {
@@ -19,11 +21,13 @@ export const fetchWithoutToken = (endpoint, data, method='GET') => {
             },
             body: JSON.stringify(data)
         }).then(response => {
-            console.log(`main fetch -> success -> status code -> ${response.status}`);
+            // console.log(`main fetch -> success -> status code -> ${response.status}`);
+            return response;
         }).catch(error => {
-            console.log(`main fetch -> error -> ${error}`);
+            // console.log(`main fetch -> error -> ${error}`);
+            return null;
         }).finally(() => {
-            console.log('main fetch -> finally');
+            // console.log('main fetch -> finally');
         });
     }
 }
@@ -39,11 +43,13 @@ export const fetchWithToken = (endpoint, data, method='GET') => {
                 'Authorization': `Token ${token}`
             }
         }).then(response => {
-            console.log(`main fetch -> success -> status code -> ${response.status}`);
+            // console.log(`main fetch -> success -> status code -> ${response.status}`);
+            return response;
         }).catch(error => {
-            console.log(`main fetch -> error -> ${error}`);
+            // console.log(`main fetch -> error -> ${error}`);
+            return null;
         }).finally(() => {
-            console.log('main fetch -> finally');
+            // console.log('main fetch -> finally');
         });
     } else {
         return fetch (url, {
@@ -54,11 +60,13 @@ export const fetchWithToken = (endpoint, data, method='GET') => {
             },
             body: JSON.stringify(data)
         }).then(response => {
-            console.log(`main fetch -> success -> status code -> ${response.status}`);
+            // console.log(`main fetch -> success -> status code -> ${response.status}`);
+            return response;
         }).catch(error => {
-            console.log(`main fetch -> error -> ${error}`);
+            // console.log(`main fetch -> error -> ${error}`);
+            return null;
         }).finally(() => {
-            console.log('main fetch -> finally');
+            // console.log('main fetch -> finally');
         });
     }
 }

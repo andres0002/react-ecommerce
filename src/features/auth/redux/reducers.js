@@ -8,7 +8,7 @@ const initialState = {
     checking: true
 }
 
-export const reduxAuth = (state=initialState, action) => {
+export const reducersAuth = (state=initialState, action) => {
     switch (action.type) {
         case types.login:
             return {

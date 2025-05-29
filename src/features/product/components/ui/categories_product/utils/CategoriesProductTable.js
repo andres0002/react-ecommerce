@@ -3,7 +3,7 @@
 // third
 import { useDispatch } from "react-redux";
 // own
-import { activateCategoriesProduct } from "../../../../actions/categories_product";
+import { activateCategoriesProduct } from "../../../../redux/categories_product/actions";
 import { ModalCategoriesProductEdit } from "../ModalCategoriesProductEdit";
 import { ModalCategoriesProductDelete } from "../ModalCategoriesProdcutDelete";
 

@@ -2,7 +2,7 @@
 // react
 // third
 // own
-import { types } from "../../../core/types";
+import { types } from "../../../../core/types";
 
 const initialState = {
     columns: [],
@@ -10,11 +10,12 @@ const initialState = {
     categories_product: {}
 };
 
-export const reduxProducts = (state=initialState, action) => {
+export const reducersCategoriesProduct = (state=initialState, action) => {
     switch (action.type) {
         case types.eventLoaded:
             return {
                 ...state,
+                columns: [...action.payload.columns],
                 rows: [...action.payload.data]
             };
         

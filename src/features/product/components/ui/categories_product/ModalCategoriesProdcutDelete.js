@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // own
 import { useForm } from "../../../../../core/hooks/useForm";
-import { deleteCategoriesProduct } from "../../../actions/categories_product";
+import { deleteCategoriesProduct } from "../../../redux/categories_product/actions";
 
 export const ModalCategoriesProductDelete = () => {
     const dispatch = useDispatch();

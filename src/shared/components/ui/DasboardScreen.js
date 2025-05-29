@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom"
 import { Header } from "./Header"
 import { NavBar } from "./NavBar"
 import { NavBarMobile } from "./NavBarMobile"
-import { RoutersPrivate } from "../../../core/routers/RoutersPrivate"
+import { PrivateRouters } from "../../../core/routers/PrivateRouters"
 import { CategoriesProductScreen } from "../../../features/product/components/categories_product/CategoriesProductScreen"
 import { Footer } from "./Footer"
 
@@ -29,7 +29,7 @@ export const DasboardScreen = () => {
                                 <Route
                                     exact path="/products/category-products"
                                     element = {
-                                        <RoutersPrivate isAuthenticated = { !!token }
+                                        <PrivateRouters isAuthenticated = { !!token }
                                             children = { <CategoriesProductScreen/> } 
                                         />   
                                     }
